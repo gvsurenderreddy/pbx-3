@@ -3,11 +3,12 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Parallax Template - Materialize</title>
+  <title>PBX Logistics - reliable partner in the field of logistics and cargo forwarding</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/flexbox.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
@@ -15,14 +16,38 @@
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="index.html" class="brand-logo">
-        <img src="images/pbx-logo.png" height="68" width="181" alt="PBX logo"/>
+        <img src="images/pbx-logo.png" alt="PBX logo"/>
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Who are we?</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact us</a></li>
+        <!--<li><a href="#">Home</a></li>-->
+        <li>
+          <a href="#">
+            <div class="flex align-items-center">
+              <i class="material-icons blue-grey-text small">supervisor_account</i><span>Who are we?</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="flex align-items-center">
+              <i class="material-icons blue-grey-text small">local_shipping</i><span>Services</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="flex align-items-center">
+              <i class="material-icons blue-grey-text small">person_pin</i><span>Careers</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="flex align-items-center">
+              <i class="material-icons blue-grey-text small">mail_outline</i><span>Contact us</span>
+            </div>
+          </a>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
@@ -32,59 +57,57 @@
     </div>
   </nav>
 </div>
-<div id="index-banner" class="parallax-container">
+<div id="index-banner" class="parallax-container top">
   <div class="section no-pad-bot">
     <div class="container">
-      <br><br>
-      <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      <div class="row center banner-text">
+        <h5 class="header col s12 text-uppercase">Providing service to our clients to meet their just-in-time requirements</h5>
       </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-      </div>
+      <!--<div class="row center">-->
+        <!--<a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Contact</a>-->
+      <!--</div>-->
       <br><br>
 
     </div>
   </div>
-  <div class="parallax"><img src="images/track.jpg" alt="Track image"></div>
+  <div class="parallax"><img src="images/IMG_1565.jpg" alt="Road image"></div>
 </div>
 
 
-<div class="container">
+<div class="container padding-top-20">
   <div class="section">
 
     <!--   Icon Section   -->
-    <div class="row">
+    <div class="row intro-section">
       <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-          <h5 class="center">WAREHOUSE</h5>
-
-          <p class="light">PBX Logistics, through their warehouse in Burnaby, BC, offers temperature controlled storage capacities. Their multi-door warehouse enables the swift and efficient integration with trucking services.
-            To facilitate understanding, to service and meet customer needs, representatives are available on a 24/7 basis.</p>
+        <div class="icon-block flex">
+          <h2 class="red-text text-accent-4 padding-right-10"><i class="material-icons">star</i></h2>
+          <div>
+            <h5>Warehouse</h5>
+            <p>Through our multi-door warehouse with temperature-controlled capacities in our Burnaby, BC location, we are able to provide storage and re-routing to various locations</p>
+          </div>
         </div>
       </div>
 
       <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-          <h5 class="center">DISTRIBUTION</h5>
-
-          <p class="light">The cross-docking facilities, ocean shipping container de-stuffing and transloading services and inventory management enable the PBX team to receive and re-route incoming shipments to multiple destinations.
-            PBX offers truckload and less than truckload services throughout many areas of North America, particularly on the American I-5 corridor and Eastern USA and has the necessary warehouse and distribution ability to support the over the road service.
+        <div class="icon-block flex">
+          <h2 class="red-text text-accent-4 padding-right-10"><i class="material-icons">timer</i></h2>
+          <div>
+            <h5>Truckload</h5>
+            <p>Both full truckload (TL) and less-than-truckload (LTL) services throughout many North America areas are offered with special attention to just-in-time delivery requirements.
           </p>
+          </div>
         </div>
       </div>
 
       <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-          <h5 class="center">WHO ARE WE?</h5>
-
-          <p class="light">PBX Logistics has grown rapidly largely thanks to its committed drivers and working ownership. Only team drivers are utilized  and to maintain the high standard of the driver pool, trainers are hired to ensure this standard is maintained.
-            By concentrating on providing service to our clients to meet their just-in-time requirements through flexible and tailored solutions, PBX Logistics has grown steadily. With Jason, Miljan and Shamim working full time, PBX has been able to sustain a high level of customer satisfaction.
+        <div class="icon-block flex">
+          <h2 class="red-text text-accent-4 padding-right-10"><i class="material-icons">beenhere</i></h2>
+          <div>
+            <h5>Local Cartage</h5>
+            <p>Local delivery services are offered in the Lower Mainland.
           </p>
+          </div>
         </div>
       </div>
     </div>
@@ -92,28 +115,24 @@
   </div>
 </div>
 
+<div class="section no-pad-bot">
+  <div class="container">
+    <div class="row center"><img src="images/track2.jpg" alt="Track image">
 
-<div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-      </div>
     </div>
   </div>
-  <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
 </div>
 
 <div class="container">
   <div class="section">
 
-    <div class="row">
-      <div class="col s12 center">
-        <h3><i class="mdi-content-send brown-text"></i></h3>
-        <h4>Contact Us</h4>
-        <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-      </div>
-    </div>
+    <!--<div class="row">-->
+      <!--<div class="col s12 center">-->
+        <!--<h5>PRICING INQUIRY</h5>-->
+        <!--<p class="left-align">-->
+          <!--<a href="contact.html">Get a quote</a> regarding a shipment, or our pricing on a regular lane of traffic. You will be contacted within 24-48 hours by a PBX representative.</p>-->
+      <!--</div>-->
+    <!--</div>-->
 
   </div>
 </div>
@@ -123,45 +142,54 @@
   <div class="section no-pad-bot">
     <div class="container">
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h4 class="header col s12">Another nice slogan</h4>
       </div>
     </div>
   </div>
-  <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  <div class="parallax"><img src="images/IMG_2150.jpg" alt="Road image"/></div>
 </div>
 
-<footer class="page-footer teal">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+<footer class="page-footer">
+  <div class="container padding-bottom-20 padding-top-20">
+    <div class="row flex flex-wrap align-content-center justify-content-space-between">
+      <div class="padding-bottom-10 footer-contact-item">
 
-
+        <div class="flex flex-nowrap">
+          <div class="padding-right-10 blue-text"><i class="material-icons">location_on</i></div>
+          <div class="white-text light">
+            <h6 class="grey-text">Address</h6>
+            <div>PBX Logistic inc.</div>
+            <div>5628 Riverbend Drive #2,</div>
+            <div>Burnaby, British Columbia,</div>
+            <div>V3N 0C1 Canada</div>
+          </div>
+        </div>
       </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
+      <div class="padding-bottom-10 footer-contact-item">
+        <div class="flex flex-nowrap">
+          <div class="padding-right-10 blue-text"><i class="material-icons">call</i></div>
+          <div class="white-text light">
+            <h6 class="grey-text">Phone</h6>
+            <div>Phone: 604-777-9720</div>
+            <div>Fax: 604-777-1049</div>
+          </div>
+        </div>
       </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
+      <div class="padding-bottom-10 footer-contact-item">
+        <div class="flex flex-nowrap">
+          <div class="padding-right-10 blue-text"><i class="material-icons">email</i></div>
+          <div class="white-text light">
+            <h6 class="grey-text">Email</h6>
+            <div><a href="mailto:jason@pacificblue.ca" class="white-text">jason@pacificblue.ca</a></div>
+            <div><a href="mailto:miljan@pacificblue.ca" class="white-text">miljan@pacificblue.ca</a></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Copyright &copy; <script>document.write(new Date().getFullYear())</script> PBX Logistics Ltd.
     </div>
   </div>
 </footer>
