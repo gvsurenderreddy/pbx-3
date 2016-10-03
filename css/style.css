@@ -10,6 +10,9 @@ h2 {
 .text-uppercase {
   text-transform: uppercase;
 }
+.fill-height {
+  height: 100vh;
+}
 i.tiny {
   font-size: 1rem!important;
 }
@@ -113,9 +116,10 @@ p {
 }
 .parallax-container.top {
   min-height: 420px;
+  height: 50vh;
 }
 .parallax-container.top img{
-  bottom: 20%;
+  bottom: 20% !important;
 }
   .parallax-container .section {
     width: 100%;
@@ -126,10 +130,31 @@ p {
     position: absolute;
     top: 40%;
   }
+  /*.parallax-container.top {*/
+    /*min-height: 620px;*/
+  /*}*/
+  /*.parallax-container.top img{*/
+    /*bottom: 20% !important;*/
+  /*}*/
   #index-banner .section {
     top: 10%;
   }
 }
+/*@media only screen and (max-width : 1200px) {*/
+  /*.parallax-container .section {*/
+    /*position: absolute;*/
+    /*top: 40%;*/
+  /*}*/
+  /*.parallax-container.top {*/
+    /*min-height: 620px;*/
+  /*}*/
+  /*.parallax-container.top img{*/
+    /*bottom: 20% !important;*/
+  /*}*/
+  /*#index-banner .section {*/
+    /*top: 10%;*/
+  /*}*/
+/*}*/
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
