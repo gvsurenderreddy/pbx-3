@@ -121,9 +121,9 @@ p {
 .parallax-container.top img{
   bottom: 20% !important;
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+.parallax-container .section {
+  width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -131,29 +131,29 @@ p {
     top: 40%;
   }
   /*.parallax-container.top {*/
-    /*min-height: 620px;*/
+  /*min-height: 620px;*/
   /*}*/
   /*.parallax-container.top img{*/
-    /*bottom: 20% !important;*/
+  /*bottom: 20% !important;*/
   /*}*/
   #index-banner .section {
     top: 10%;
   }
 }
 /*@media only screen and (max-width : 1200px) {*/
-  /*.parallax-container .section {*/
-    /*position: absolute;*/
-    /*top: 40%;*/
-  /*}*/
-  /*.parallax-container.top {*/
-    /*min-height: 620px;*/
-  /*}*/
-  /*.parallax-container.top img{*/
-    /*bottom: 20% !important;*/
-  /*}*/
-  /*#index-banner .section {*/
-    /*top: 10%;*/
-  /*}*/
+/*.parallax-container .section {*/
+/*position: absolute;*/
+/*top: 40%;*/
+/*}*/
+/*.parallax-container.top {*/
+/*min-height: 620px;*/
+/*}*/
+/*.parallax-container.top img{*/
+/*bottom: 20% !important;*/
+/*}*/
+/*#index-banner .section {*/
+/*top: 10%;*/
+/*}*/
 /*}*/
 
 @media only screen and (max-width : 600px) {
@@ -167,8 +167,8 @@ p {
     transition: all .4s ease,opacity .3s ease;
   }
   /*.small-header nav {*/
-    /*height: 55px;*/
-    /*line-height: 55px;*/
+  /*height: 55px;*/
+  /*line-height: 55px;*/
   /*}*/
   nav .brand-logo {
     width: 150px;
