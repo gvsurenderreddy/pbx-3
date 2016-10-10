@@ -1,6 +1,10 @@
 /* Custom Stylesheet */
 a:hover {
-  /*text-decoration: underline;*/
+  text-decoration: none;
+  color: #026194;
+}
+a:hover span {
+  text-decoration: underline;
 }
 h2 {
   font-size: 2.56rem;
@@ -30,22 +34,22 @@ i.large {
 }
 
 .padding-right-10 {
-  padding-right: 10px;
+  padding-right: 10px !important;
 }
 .padding-bottom-10 {
-  padding-bottom: 10px;
+  padding-bottom: 10px !important;
 }
 .padding-top-20 {
-  padding-top: 20px;
+  padding-top: 20px !important;
 }
 .padding-left-20 {
-  padding-left: 20px;
+  padding-left: 20px !important;
 }
 .padding-bottom-20 {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
 }
 .banner-text {
-  padding-top: 210px;
+  padding-top: 15%;
 }
 .width-80 {
   width: 81%;
@@ -99,6 +103,13 @@ nav i.material-icons {
   padding: 0 5px 0 0;
   height: 56px;
   line-height: 56px;
+  color: inherit;
+}
+.side-nav a {
+  color: rgba(255, 255, 255, 0.87);
+}
+.side-nav li > a > i, .side-nav li > a > [class^="mdi-"], .side-nav li > a > [class*="mdi-"], .side-nav li > a > i.material-icons {
+  color: inherit;
 }
 p {
   line-height: 1.5rem;
@@ -119,10 +130,39 @@ p {
   height: 50vh;
 }
 .parallax-container.top img{
-  bottom: 20% !important;
+  bottom: 20% ;
 }
 .parallax-container .section {
   width: 100%;
+}
+
+.parallax-container.top img.parallax-about-image{
+  bottom: 0 ;
+}
+/*img.parallax-about-image {*/
+  /*bottom: 30%;*/
+/*}*/
+
+nav ul li.active {
+  background-color: transparent;
+}
+nav ul li.active a {
+  color: #019ccf !important;
+}
+nav ul li a:hover {
+  background-color: transparent;
+  color: #026194 !important;
+}
+nav ul li a i {
+  transition: font-size .3s;
+}
+nav ul li a:hover i {
+  font-size: 1.8rem !important;
+}
+nav ul li {
+  transition: background-color .3s;
+  float: left;
+  padding: 0;
 }
 
 @media only screen and (max-width : 992px) {
@@ -155,6 +195,7 @@ p {
 /*top: 10%;*/
 /*}*/
 /*}*/
+
 
 @media only screen and (max-width : 600px) {
   #index-banner .section {
@@ -211,4 +252,57 @@ footer.page-footer .footer-copyright {
 }
 footer.page-footer .footer-copyright .container {
   padding: 0 10px 0 118px;
+}
+
+.maps iframe{
+  pointer-events: none;
+}
+/* Contact form */
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #019ccf;
+  box-shadow: 0 1px 0 0 #019ccf;
+}
+input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+  background-color: #f5f5f5;
+  margin: 5px 0;
+}
+.input-field .prefix ~ input, .input-field .prefix ~ textarea, .input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label, .input-field .prefix ~ .autocomplete-content {
+  padding: 0px 5px;
+}
+textarea.materialize-textarea {
+  min-height: 8rem;
+}
+.input-field .prefix {
+  color: #026194;
+}
+.input-field .prefix.active {
+  color: #019ccf;
+}
+.input-field label {
+  top: 1rem;
+}
+/*.input-field label.active {*/
+  /*font-size: 1rem;*/
+/*}*/
+.last-name-field {
+  padding: 0 11px 0 1px !important;
+}
+.last-name-field input {
+  padding: 0 5px;;
+}
+.contact-form form {
+  margin-left: -16px !important;
+}
+.contact-form .input-field.submit-button {
+  padding-left: 54px;
+}
+.contact-form h5 {
+  /*margin-left: 63px;*/
+  margin-bottom: 20px;
+}
+.backdrop {
+  background-color: #026194;
+}
+.track-image img {
+  width: 300px;
 }

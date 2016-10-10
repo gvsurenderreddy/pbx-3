@@ -1,0 +1,102 @@
+{{#> layouts/base title="PBX Logistics - reliable partner in the field of logistics and cargo forwarding" }}
+
+  {{#*inline "head-block"}}
+
+  {{/inline}}
+
+  {{#*inline "nav-block"}}
+    {{> includes/nav}}
+  {{/inline}}
+
+  {{#*inline "content-block"}}
+    <div id="index-banner" class="parallax-container top">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="row center banner-text">
+            <!--<h3 class="header col s12 text-uppercase">Powered by driver and customer needs</h3>-->
+            <!--<h6 class="header col s12 text-uppercase">Providing service to our clients to meet their just-in-time requirements</h6>-->
+          </div>
+          <!--<div class="row center">-->
+          <!--<a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Contact</a>-->
+          <!--</div>-->
+          <br><br>
+
+        </div>
+      </div>
+      <div class="parallax"><img src="images/intro-image5.jpg" alt="Road image" class="parallax-contact-image"></div>
+    </div>
+
+    <div class="container padding-top-20">
+      <!--   Contact form section   -->
+      <div class="section contact-form">
+        <div class="row intro-section">
+          <div class="col s12">
+            <div class="icon-block flex">
+              <h2 class="red-text text-accent-4 padding-right-10"><i class="material-icons">live_help</i></h2>
+              <div>
+                <h5>Contact Form/Pricing Inquiry</h5>
+                <p>Please fill out the form if you are interested in a quote regarding a shipment, or our pricing on a regular lane of traffic. You will be contacted within 24-48 hours by a PBX representative.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <form class="s12" method="post" action="./scripts/contact-form.php">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="first_name" name="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6 last-name-field">
+                <!--<i class="material-icons prefix">account_circle</i>-->
+                <input id="last_name" name="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">phone</i>
+                <input id="phone" name="phone" type="text" class="validate">
+                <label for="password">Phone</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="material-icons prefix">mail_outline</i>
+                <input id="email" name="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <i class="material-icons prefix">mode_edit</i>
+                <textarea id="message" name="message" required rows="3" class="materialize-textarea"></textarea>
+                <label for="message">Message</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 submit-button">
+                <button class="btn waves-effect waves-light light-blue darken-3" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="embed-container maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d166751.65501353302!2d-123.234095959876!3d49.22911103872507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485d8a2168bfcb3%3A0x10c3aff1bbd8c607!2sPBX+logistics+Ltd.!5e0!3m2!1sen!2sus!4v1475294371048" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+  {{/inline}}
+
+  {{#*inline "footer-block"}}
+    {{> includes/footer}}
+  {{/inline}}
+
+  {{!-- Let's add another script for this layout. --}}
+  {{#*inline "scripts-block"}}
+    {{> includes/scripts }}
+  {{/inline}}
+
+{{/layouts/base}}
