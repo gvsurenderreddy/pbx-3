@@ -19,7 +19,7 @@ if(isset($_POST['email'])) {
         !isset($_POST['last_name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['phone']) ||
-        !isset($_POST['comments'])) {
+        !isset($_POST['message'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
@@ -27,7 +27,7 @@ if(isset($_POST['email'])) {
     $last_name = $_POST['last_name']; // required
     $email_from = $_POST['email']; // required
     $phone = $_POST['phone']; // not required
-    $comments = $_POST['comments']; // required
+    $message = $_POST['message']; // required
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
@@ -46,7 +46,7 @@ if(isset($_POST['email'])) {
     $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
   }
 
-  if(strlen($comments) < 2) {
+  if(strlen($message) < 2) {
     $error_message .= 'The Comments you entered do not appear to be valid.<br />';
   }
 
@@ -61,11 +61,11 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
     }
 
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
-    $email_message .= "Last Name: ".clean_string($last_name)."\n";
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Phone: ".clean_string($phone)."\n";
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+    //$email_message .= "First Name: ".clean_string($first_name)."\n";
+    //$email_message .= "Last Name: ".clean_string($last_name)."\n";
+    //$email_message .= "Email: ".clean_string($email_from)."\n";
+    //$email_message .= "Phone: ".clean_string($phone)."\n";
+    //$email_message .= "Comments: ".clean_string($message)."\n";
 
 // message
 $email_message = '
@@ -76,18 +76,11 @@ $email_message = '
 <body>
   <h3>PBX Contact form info request</h3>
   <p>'.'First Name: '.clean_string($first_name). '</p>
-  <table>
-    <tr>
-      <th>Person</th><th>Day</th><th>Month</th><th>Year</th>
-    </tr>
-    <tr>
-      <td>Joe</td><td>3rd</td><td>August</td><td>1970</td>
-    </tr>
-    <tr>
-      <td>Sally</td><td>17th</td><td>August</td><td>1973</td>
-    </tr>
-  </table>
-</body>
+  <p>'.'Last Name: '.clean_string($last_name). '</p>
+  <p>'.'Email: '.clean_string($email_from). '</p>
+  <p>'.'Phone: '.clean_string($phone). '</p>
+  <p>'.'Message: '.clean_string($message). '</p>
+  </body>
 </html>
 ';
 
@@ -103,7 +96,12 @@ $headers .= 'X-Mailer: PHP/' . phpversion();
 
 // Mail it
 //mail($to, $subject, $message, $headers);
-@mail($email_to, $email_subject, $email_message, $headers);
+if(mail($email_to, $email_subject, $email_message, $headers)){
+        header("Location: success-message.html");
+    } else {
+        died($error_message);
+    }
+//@mail($email_to, $email_subject, $email_message, $headers);
 ?>
 <!-- include your own success html here -->
 

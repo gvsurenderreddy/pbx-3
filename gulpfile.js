@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 const browserSync = require('browser-sync').create();
 const del = require('del');
@@ -6,7 +6,7 @@ const env = require('gulp-util').env;
 const gulp = require('gulp');
 const handlebars = require('gulp-compile-handlebars');
 const rename = require('gulp-rename');
-const livereload = require('gulp-livereload');
+//const livereload = require('gulp-livereload');
 
 const config = {
   src: './src',
