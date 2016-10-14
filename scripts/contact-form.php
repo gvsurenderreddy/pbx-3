@@ -3,7 +3,7 @@ if(isset($_POST['email'])) {
 
   $email_to  = 'ficture@gmail.com' . ', ';
   $email_to .= 'oversun@gmail.com';
-  $email_subject = "Contact request";
+  $email_subject = "Contact request from PBX website";
 
     function died($error) {
         // your error code can go here
@@ -15,18 +15,18 @@ if(isset($_POST['email'])) {
     }
 
     // validation expected data exists
-    if(!isset($_POST['first_name']) ||
-        !isset($_POST['last_name']) ||
+    if(!isset($_POST['name']) ||
+        !isset($_POST['company']) ||
         !isset($_POST['email']) ||
         !isset($_POST['phone']) ||
         !isset($_POST['message'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
-    $first_name = $_POST['first_name']; // required
-    $last_name = $_POST['last_name']; // required
+    $name = $_POST['name']; // required
+    $company = $_POST['company']; // required
     $email_from = $_POST['email']; // required
-    $phone = $_POST['phone']; // not required
+    $phone = $_POST['phone']; // required
     $message = $_POST['message']; // required
 
     $error_message = "";
@@ -38,12 +38,16 @@ if(isset($_POST['email'])) {
 
     $string_exp = "/^[A-Za-z .'-]+$/";
 
-  if(!preg_match($string_exp,$first_name)) {
+  if(!preg_match($string_exp,$name)) {
     $error_message .= 'The First Name you entered does not appear to be valid.<br />';
   }
 
-  if(!preg_match($string_exp,$last_name)) {
+  if(!preg_match($string_exp,$company)) {
     $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
+  }
+
+  if(!preg_match($string_exp,$phone)) {
+    $error_message .= 'The Phone you entered does not appear to be valid.<br />';
   }
 
   if(strlen($message) < 2) {
@@ -61,8 +65,8 @@ if(isset($_POST['email'])) {
       return str_replace($bad,"",$string);
     }
 
-    //$email_message .= "First Name: ".clean_string($first_name)."\n";
-    //$email_message .= "Last Name: ".clean_string($last_name)."\n";
+    //$email_message .= "First Name: ".clean_string($name)."\n";
+    //$email_message .= "Last Name: ".clean_string($company)."\n";
     //$email_message .= "Email: ".clean_string($email_from)."\n";
     //$email_message .= "Phone: ".clean_string($phone)."\n";
     //$email_message .= "Comments: ".clean_string($message)."\n";
@@ -75,8 +79,8 @@ $email_message = '
 </head>
 <body>
   <h3>PBX Contact form info request</h3>
-  <p>'.'First Name: '.clean_string($first_name). '</p>
-  <p>'.'Last Name: '.clean_string($last_name). '</p>
+  <p>'.'First Name: '.clean_string($name). '</p>
+  <p>'.'Last Name: '.clean_string($company). '</p>
   <p>'.'Email: '.clean_string($email_from). '</p>
   <p>'.'Phone: '.clean_string($phone). '</p>
   <p>'.'Message: '.clean_string($message). '</p>

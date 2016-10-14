@@ -55,8 +55,8 @@ i.large {
   width: 81%;
 }
 .parallax img {
-  width: 100vw;
-  /*bottom: 30%;*/
+  /*width: 100vw;*/
+  bottom: 30%;
 }
 nav {
   height: 85px;
@@ -129,12 +129,12 @@ p {
   min-height: 420px;
   height: 50vh;
 }
-.parallax-container.top img{
-  bottom: 20% ;
-}
-.parallax-container .section {
-  width: 100%;
-}
+/*.parallax-container.top img{*/
+  /*bottom: 20% ;*/
+/*}*/
+/*.parallax-container .section {*/
+  /*width: 100%;*/
+/*}*/
 
 .parallax-container.top img.parallax-about-image{
   bottom: 0 ;
@@ -179,6 +179,7 @@ nav ul li {
   #index-banner .section {
     top: 10%;
   }
+
 }
 /*@media only screen and (max-width : 1200px) {*/
 /*.parallax-container .section {*/
@@ -218,7 +219,25 @@ nav ul li {
     transition: none;
   }
 }
-
+.parallax-container.top img.parallax-services-image {
+   width: 100vw;
+ }
+.parallax-container.top img.parallax-careers-image {
+  bottom: 15%
+}
+@media only screen and (min-width: 1100px)  {
+  .parallax-container.top img.parallax-services-image {
+    bottom: 35%
+  }
+}
+@media only screen and (min-width: 1400px)  {
+  .parallax-container.top img.parallax-services-image {
+    bottom: 50%
+  }
+  .parallax-container.top img.parallax-careers-image {
+    bottom: 25%
+  }
+}
 .icon-block {
   /*padding: 0 15px;*/
 }
@@ -284,9 +303,9 @@ textarea.materialize-textarea {
 /*.input-field label.active {*/
   /*font-size: 1rem;*/
 /*}*/
-.last-name-field {
-  padding: 0 11px 0 1px !important;
-}
+/*.last-name-field {*/
+  /*padding: 0 11px 0 1px !important;*/
+/*}*/
 .last-name-field input {
   padding: 0 5px;;
 }
@@ -305,4 +324,11 @@ textarea.materialize-textarea {
 }
 .track-image img {
   width: 300px;
+}
+.link-bigger-font {
+  font-size: 18px;
+}
+.logo-pre {
+  width: 70px;
+  height: 70px;
 }
