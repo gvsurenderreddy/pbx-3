@@ -11,6 +11,11 @@ h2 {
   line-height: 110%;
   margin: 0.35rem 0 1.424rem 0;
 }
+.banner-text h3 {
+  font-size: 2rem;
+  line-height: 110%;
+  margin: 0.35rem 0 1.424rem 0;
+}
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -36,6 +41,9 @@ i.large {
 .padding-right-10 {
   padding-right: 10px !important;
 }
+.padding-left-10 {
+  padding-left: 10px !important;
+}
 .padding-bottom-10 {
   padding-bottom: 10px !important;
 }
@@ -44,6 +52,9 @@ i.large {
 }
 .padding-left-20 {
   padding-left: 20px !important;
+}
+.padding-right-20 {
+  padding-right: 20px !important;
 }
 .padding-bottom-20 {
   padding-bottom: 20px !important;
@@ -318,6 +329,9 @@ textarea.materialize-textarea {
 .contact-form h5 {
   /*margin-left: 63px;*/
   margin-bottom: 20px;
+}
+.contact-form-success {
+  padding-bottom: 150px;
 }
 .backdrop {
   background-color: #026194;

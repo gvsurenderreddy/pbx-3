@@ -1,7 +1,8 @@
 <?php
 if(isset($_POST['email'])) {
 
-  $email_to  = 'ficture@gmail.com' . ', ';
+  $email_to  = 'dellena@gmail.com' . ', ';
+  $email_to .= 'elena@pacificblue.ca' . ', ';
   $email_to .= 'oversun@gmail.com';
   $email_subject = "Contact request from PBX website";
 
@@ -9,7 +10,7 @@ if(isset($_POST['email'])) {
         // your error code can go here
         echo "We are very sorry, but there were error(s) found with the form you submitted. ";
         echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
+        echo "<br /><br />";
         echo "Please go back and fix these errors.<br /><br />";
         die();
     }
@@ -24,13 +25,14 @@ if(isset($_POST['email'])) {
     }
 
     $name = $_POST['name']; // required
-    $company = $_POST['company']; // required
+    $company = $_POST['company']; // not required
     $email_from = $_POST['email']; // required
     $phone = $_POST['phone']; // required
     $message = $_POST['message']; // required
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+    $phone_exp = '/^[0-9]+$/';
 
   if(!preg_match($email_exp,$email_from)) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
@@ -39,16 +41,16 @@ if(isset($_POST['email'])) {
     $string_exp = "/^[A-Za-z .'-]+$/";
 
   if(!preg_match($string_exp,$name)) {
-    $error_message .= 'The First Name you entered does not appear to be valid.<br />';
+    $error_message .= 'The Name you entered does not appear to be valid.<br />';
   }
+//
+//  if(!preg_match($string_exp,$company)) {
+//    $error_message .= 'The Company you entered does not appear to be valid.<br />';
+//  }
 
-  if(!preg_match($string_exp,$company)) {
-    $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
-  }
-
-  if(!preg_match($string_exp,$phone)) {
-    $error_message .= 'The Phone you entered does not appear to be valid.<br />';
-  }
+//  if(!preg_match($string_exp,$phone)) {
+//    $error_message .= 'The Phone you entered does not appear to be valid.<br />';
+//  }
 
   if(strlen($message) < 2) {
     $error_message .= 'The Comments you entered do not appear to be valid.<br />';
@@ -58,7 +60,7 @@ if(isset($_POST['email'])) {
     died($error_message);
   }
 
-    $email_message = "Form details below.\n\n";
+//    $email_message = "Form details below.\n\n";
 
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
@@ -78,9 +80,9 @@ $email_message = '
   <title>PBX Contact form</title>
 </head>
 <body>
-  <h3>PBX Contact form info request</h3>
-  <p>'.'First Name: '.clean_string($name). '</p>
-  <p>'.'Last Name: '.clean_string($company). '</p>
+  <h3>PBX contact form info request</h3>
+  <p>'.'Name: '.clean_string($name). '</p>
+  <p>'.'Company: '.clean_string($company). '</p>
   <p>'.'Email: '.clean_string($email_from). '</p>
   <p>'.'Phone: '.clean_string($phone). '</p>
   <p>'.'Message: '.clean_string($message). '</p>
@@ -94,8 +96,9 @@ $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 // Additional headers
-$headers .= 'To: '.$email_from."\r\n";
-$headers .= 'From: '.$email_from."\r\n";
+//$headers .= 'To: '.$email_to. "\r\n";
+//$headers .= 'From: '.$email_from."\r\n";
+$headers .= 'From: PBX Contact Request <jason@pacificblue.ca>' . "\r\n";
 $headers .= 'X-Mailer: PHP/' . phpversion();
 
 // Mail it
@@ -103,7 +106,7 @@ $headers .= 'X-Mailer: PHP/' . phpversion();
 if(mail($email_to, $email_subject, $email_message, $headers)){
         header("Location: success-message.html");
     } else {
-        died($error_message);
+        died("Could not send the message. Please try again later.");
     }
 //@mail($email_to, $email_subject, $email_message, $headers);
 ?>
